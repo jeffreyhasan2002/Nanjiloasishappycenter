@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { PageMeta } from '../components/PageMeta'
 import { PageHero } from '../components/PageHero'
 import { phone, phoneDisplay, email } from '../constants/site'
@@ -100,10 +101,52 @@ export function About() {
         </div>
       </section>
 
-      {/* ── OUR JOURNEY ── */}
+      {/* ── OUR JOURNEY (featured storytelling) ── */}
+      <section className="section our-journey-feature" aria-labelledby="our-journey-feature-title">
+        <div className="container">
+          <div className="our-journey-feature__grid">
+            <div className="our-journey-feature__media">
+              <div className="our-journey-feature__image-wrap">
+                <img
+                  src="/assets/mother.jpg"
+                  alt="A mother with her child — the beginning of Nanjil Oasis"
+                  className="our-journey-feature__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+
+            <div className="our-journey-feature__content">
+              <p className="section__label our-journey-feature__label">OUR JOURNEY</p>
+              <h2
+                id="our-journey-feature-title"
+                className="section__title section__title--large our-journey-feature__title"
+              >
+                A Mother&rsquo;s Love Became a Mission
+              </h2>
+              <p className="our-journey-feature__intro">
+                In 2016, a mother&rsquo;s unwavering love transformed into a vision that
+                would change countless lives. What began as a journey to support one child
+                with special needs has grown into a thriving community where every child is
+                empowered to learn, grow, and shine.
+              </p>
+              <Link
+                to="/about-us/our-journey"
+                className="btn btn--primary our-journey-feature__cta"
+              >
+                Read Our Full Story
+                <span className="our-journey-feature__cta-arrow" aria-hidden="true">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── COMMUNITY & CARE ── */}
       <section className="section section--alt">
         <div className="container">
-          <p className="section__label">OUR JOURNEY</p>
+          <p className="section__label">COMMUNITY &amp; CARE</p>
           <h2 className="section__title section__title--large">Community &amp; Care</h2>
 
           <div className="content-with-image content-with-image--reverse">
