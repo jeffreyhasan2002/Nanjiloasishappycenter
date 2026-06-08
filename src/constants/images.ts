@@ -149,6 +149,11 @@ const galleryAlts: string[] = [
   'Event at Nanjil Oasis',
   'Event at Nanjil Oasis',
   'Event at Nanjil Oasis',
+  'Music band activity at Nanjil Oasis',
+  'Occupational therapy session',
+  'Mother and child at Nanjil Oasis',
+  'Musical performance by students',
+  'Child using standing frame in therapy',
 ]
 
 const galleryUrls: string[] = [
@@ -184,6 +189,11 @@ const galleryUrls: string[] = [
   '/assets/images1 (30).jpeg',
   '/assets/images1 (31).jpeg',
   '/assets/images1 (32).jpeg',
+  '/assets/IMG-20260411-WA0004.jpg (1).jpeg',
+  '/assets/Occupationaltherapy.jpeg',
+  '/assets/mother.jpg',
+  '/assets/music.jpg',
+  '/assets/music1.jpeg',
 ]
 
 const galleryCategories: GalleryCategory[] = [
@@ -192,6 +202,7 @@ const galleryCategories: GalleryCategory[] = [
   'daily', 'daily', 'daily', 'daily', 'daily', 'daily', 'daily',
   'celebrations', 'celebrations', 'celebrations', 'celebrations', 'celebrations', 'celebrations', 'celebrations', 'celebrations',
   'events', 'events', 'events',
+  'events', 'therapy', 'daily', 'events', 'therapy',
 ]
 
 export const galleryImages: GalleryImage[] = galleryUrls.map((url, i) => ({

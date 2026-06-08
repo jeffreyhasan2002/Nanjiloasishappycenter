@@ -55,8 +55,8 @@ export const footerLinks = [
   { label: 'About Us', path: '/about' },
   { label: 'Contact', path: '/contact' },
   { label: 'Our Services', path: '/services' },
-  { label: 'Professional team', path: '/team#professional' },
-  { label: 'Trustees', path: '/team#trustees' },
+  { label: 'Our Team', path: '/team' },
+  { label: 'Blog', path: '/blog' },
 ]
 
 export interface ServiceItem {
