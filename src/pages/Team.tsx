@@ -3,182 +3,207 @@ import { PageHero } from '../components/PageHero'
 import { pageHeroImages } from '../constants/images'
 import { Icons } from '../components/TeamIcons'
 
-const trustees = [
-  {
-    id: 1,
-    role: 'Chairperson',
-    description:
-      'Provides overall leadership and strategic direction for Nanjil Oasis Parent Welfare Trust, ensuring the organisation stays true to its founding mission of inclusive care.',
-    icon: Icons.chairperson,
-  },
-  {
-    id: 2,
-    role: 'Secretary',
-    description:
-      'Oversees governance, record-keeping and day-to-day administration of the trust, coordinating between the board and the operational team.',
-    icon: Icons.secretary,
-  },
-  {
-    id: 3,
-    role: 'Treasurer',
-    description:
-      'Manages the financial health of the trust, ensuring transparent use of funds and accountability to donors, families and stakeholders.',
-    icon: Icons.treasurer,
-  },
-  {
-    id: 4,
-    role: 'Trustee – Parent Representative',
-    description:
-      'Brings the voice of families and caregivers directly into board decisions, championing parent-centred policies and community engagement.',
-    icon: Icons.parentRep,
-  },
-]
+/* ── Data ──────────────────────────────────────────────── */
 
-const professionals = [
-  {
-    id: 1,
-    role: 'Special Educator',
-    description:
-      "Designs and delivers individualised education plans (IEPs) tailored to each child's learning profile, using evidence-based techniques to maximise developmental outcomes.",
-    icon: Icons.specialEd,
-  },
+const founder = {
+  id: 1,
+  name: 'Rajan T.S',
+  role: 'Founder of Nanjil Oasis Happy Centre & Vocational Trainer',
+  description:
+    'Visionary founder dedicated to empowering children with special needs through inclusive education, vocational training, and holistic development programs.',
+  longDescription:
+    'With a deep-rooted passion for social change, Rajan T.S established Nanjil Oasis Happy Centre to create a safe, nurturing space where every child — regardless of ability — can learn, grow, and flourish. His leadership continues to inspire innovative programs that bridge the gap between special education and vocational readiness.',
+  image: '/assets/team/Rajan.jpg',
+}
+
+const teamMembers = [
   {
     id: 2,
-    role: 'Speech & Language Therapist',
+    name: 'A. Jesila Banu',
+    role: 'Head Mistress and Special Educator',
     description:
-      'Supports children in developing communication, language comprehension and social interaction skills through structured, play-based therapy sessions.',
-    icon: Icons.speech,
+      "Experienced educator committed to creating a supportive learning environment while providing specialized educational guidance for every child's growth.",
+    image: '/assets/team/jesilan banu.jpg',
   },
   {
     id: 3,
-    role: 'Occupational Therapist',
+    name: 'M. Rama',
+    role: 'Co-Founder and Educator',
     description:
-      'Helps children build sensory processing, fine motor and self-care abilities, enabling greater independence in daily life and classroom participation.',
-    icon: Icons.occupational,
+      'Passionate educator focused on innovative teaching methodologies and student-centered learning experiences that nurture confidence and independence.',
+    image: '/assets/team/RAMA.jpg',
   },
   {
     id: 4,
-    role: 'Physiotherapist',
+    name: 'E. Susmi',
+    role: 'Coordinator and Special Educator',
     description:
-      'Focuses on gross motor development, posture and movement, using targeted exercises to improve mobility, strength and physical confidence.',
-    icon: Icons.physio,
+      'Dedicated professional coordinating educational activities while supporting students with individualized learning strategies and care.',
+    image: '/assets/team/SUSMI.jpeg',
   },
   {
     id: 5,
-    role: 'Behaviour Support Specialist',
+    name: 'Dhivya Darshini R.',
+    role: 'Educational Innovative Coordinator',
     description:
-      'Applies positive behaviour support strategies to help children manage emotions and behaviour, creating calm and structured environments for learning.',
-    icon: Icons.behaviour,
-  },
-  {
-    id: 6,
-    role: 'Parent Counsellor',
-    description:
-      "Provides guidance, emotional support and training to families, equipping caregivers with practical strategies to support their child's progress at home.",
-    icon: Icons.counsellor,
+      'Creative educational leader implementing innovative programs, modern learning approaches, and engaging activities to enhance student development.',
+    image: '/assets/team/Dhivya Darshini.jpg',
   },
 ]
 
 const stats = [
   { value: '15+', label: 'Years of service' },
-  { value: '6',   label: 'Therapy disciplines' },
-  { value: '100+',label: 'Children supported' },
-  { value: '4',   label: 'Governing trustees' },
+  { value: '5', label: 'Dedicated staff' },
+  { value: '100+', label: 'Children supported' },
+  { value: '6', label: 'Therapy disciplines' },
 ]
+
+const values = [
+  {
+    title: 'Inclusive Education',
+    text: 'We believe every child deserves access to quality education, tailored to their unique needs and potential.',
+  },
+  {
+    title: 'Compassionate Care',
+    text: 'Our team approaches every interaction with empathy, patience, and a genuine commitment to each child\'s wellbeing.',
+  },
+  {
+    title: 'Innovation & Growth',
+    text: 'We continuously evolve our methods, embracing modern approaches to deliver the best outcomes for our students.',
+  },
+]
+
+/* ── Component ─────────────────────────────────────────── */
 
 export function Team() {
   return (
     <>
       <PageMeta
-        title="Our Team"
-        description="Our Team – Trustees and Professional team at Nanjil Oasis Happy Centre, Multicare Centre for Kids with Special Needs."
+        title="Our Leadership Team"
+        description="Meet the passionate educators and leaders dedicated to empowering every child through inclusive education, innovation, and compassionate guidance."
       />
       <PageHero
-        title="Our Team"
-        subtitle="Trustees and professional staff dedicated to every child"
+        title="Our Leadership Team"
+        subtitle="Meet the passionate educators and leaders dedicated to empowering every child through inclusive education, innovation, and compassionate guidance."
         image={pageHeroImages.team}
       />
 
-      {/* Stats Strip */}
-      <div className="team-stats-strip">
+      {/* ── Stats Strip ─────────────────────────────────── */}
+      <div className="leadership-stats-strip">
         <div className="container">
-          <ul className="team-stats">
+          <ul className="leadership-stats">
             {stats.map((s) => (
-              <li key={s.label} className="team-stat">
-                <span className="team-stat__value">{s.value}</span>
-                <span className="team-stat__label">{s.label}</span>
+              <li key={s.label} className="leadership-stats__item">
+                <span className="leadership-stats__value">{s.value}</span>
+                <span className="leadership-stats__label">{s.label}</span>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      {/* Trustees */}
-      <section className="section" id="trustees">
+      {/* ── Founder Spotlight ───────────────────────────── */}
+      <section className="section" id="founder">
         <div className="container">
-          <p className="section__label">GOVERNANCE</p>
-          <h2 className="section__title section__title--large">Trustees</h2>
+          <p className="section__label">FOUNDER</p>
+          <h2 className="section__title section__title--large">The Vision Behind Our Mission</h2>
+
+          <div className="founder-spotlight">
+            <div className="founder-spotlight__image-col">
+              <div className="founder-spotlight__image-wrap">
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="founder-spotlight__image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div className="founder-spotlight__content">
+              <h3 className="founder-spotlight__name">{founder.name}</h3>
+              <p className="founder-spotlight__role">{founder.role}</p>
+              <p className="founder-spotlight__desc">{founder.description}</p>
+              <p className="founder-spotlight__long">{founder.longDescription}</p>
+              <blockquote className="founder-spotlight__quote">
+                "Every child is unique, and every child can learn — we just need to find the right way."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Team Members ────────────────────────────────── */}
+      <section className="section section--alt" id="leadership">
+        <div className="container">
+          <p className="section__label">LEADERSHIP &amp; EDUCATORS</p>
+          <h2 className="section__title section__title--large">Our Dedicated Team</h2>
           <p className="section__intro">
-            Our board of trustees guides the vision, governance and long-term sustainability of
-            Nanjil Oasis Parent Welfare Trust — ensuring every decision puts children and families first.
+            Behind every milestone at Nanjil Oasis is a team of experienced educators and coordinators
+            who pour their hearts into shaping brighter futures for every child.
           </p>
-          <div className="team-grid">
-            {trustees.map((member) => (
-              <div key={member.id} className="team-card">
-                <div className="team-card__avatar">
-                  <span className="team-card__svg">{member.icon}</span>
+
+          <div className="leadership-grid">
+            {teamMembers.map((member) => (
+              <article key={member.id} className="leadership-card" aria-label={member.name}>
+                <div className="leadership-card__image-wrap">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="leadership-card__image"
+                    loading="lazy"
+                  />
                 </div>
-                <div className="team-card__body">
-                  <span className="team-card__badge team-card__badge--trustee">Trustee</span>
-                  <h3 className="team-card__role">{member.role}</h3>
-                  <p className="team-card__desc">{member.description}</p>
+                <div className="leadership-card__body">
+                  <h3 className="leadership-card__name">{member.name}</h3>
+                  <p className="leadership-card__role">{member.role}</p>
+                  <div className="leadership-card__divider" aria-hidden="true" />
+                  <p className="leadership-card__desc">{member.description}</p>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Our Values ──────────────────────────────────── */}
+      <section className="section" id="values">
+        <div className="container">
+          <p className="section__label">OUR VALUES</p>
+          <h2 className="section__title section__title--large">What Drives Us Every Day</h2>
+          <p className="section__intro">
+            Our team is united by a shared set of core values that guide everything we do — from individual
+            learning plans to community outreach.
+          </p>
+
+          <div className="values-grid">
+            {values.map((v, i) => (
+              <div key={i} className="values-card">
+                <span className="values-card__number" aria-hidden="true">
+                  0{i + 1}
+                </span>
+                <h3 className="values-card__title">{v.title}</h3>
+                <p className="values-card__text">{v.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Mission Callout */}
+      {/* ── Mission Callout ─────────────────────────────── */}
       <div className="team-callout">
         <div className="container">
           <div className="team-callout__inner">
             <span className="team-callout__svg">{Icons.leaf}</span>
             <p className="team-callout__text">
-              Every member of our team — from the board room to the therapy room — shares one
-              belief: <strong>every child deserves to thrive</strong>.
+              Every member of our team shares one belief:{' '}
+              <strong>every child deserves to thrive</strong>.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Professional Team */}
-      <section className="section section--alt" id="professional">
-        <div className="container">
-          <p className="section__label">PROFESSIONAL TEAM</p>
-          <h2 className="section__title section__title--large">Multidisciplinary experts</h2>
-          <p className="section__intro">
-            Our skilled professionals work collaboratively across disciplines to deliver holistic,
-            child-centred care — combining therapy, education and family support under one roof.
-          </p>
-          <div className="team-grid team-grid--wide">
-            {professionals.map((member) => (
-              <div key={member.id} className="team-card team-card--horizontal">
-                <div className="team-card__avatar team-card__avatar--sm">
-                  <span className="team-card__svg">{member.icon}</span>
-                </div>
-                <div className="team-card__body">
-                  <span className="team-card__badge team-card__badge--pro">Professional</span>
-                  <h3 className="team-card__role">{member.role}</h3>
-                  <p className="team-card__desc">{member.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Join CTA */}
+      {/* ── Join CTA ────────────────────────────────────── */}
       <section className="section team-join">
         <div className="container">
           <div className="team-join__inner">

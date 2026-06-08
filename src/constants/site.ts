@@ -37,14 +37,7 @@ export const navItems: NavItem[] = [
   { label: 'Home', path: '/' },
   { label: 'About Us', path: '/about' },
   { label: 'Our Services', path: '/services' },
-  {
-    label: 'Our Team',
-    path: '/team',
-    children: [
-      { label: 'Trustees', path: '/team#trustees' },
-      { label: 'Professional team', path: '/team#professional' },
-    ],
-  },
+  { label: 'Our Team', path: '/team' },
   { label: 'Blog', path: '/blog' },
   {
     label: 'Gallery',
