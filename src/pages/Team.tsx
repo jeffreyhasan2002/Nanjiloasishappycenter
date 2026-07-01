@@ -41,19 +41,11 @@ const teamMembers = [
       'Dedicated professional coordinating educational activities while supporting students with individualized learning strategies and care.',
     image: '/assets/team/SUSMI.jpeg',
   },
-  {
-    id: 5,
-    name: 'Dhivya Darshini R.',
-    role: 'Educational Innovative Coordinator',
-    description:
-      'Creative educational leader implementing innovative programs, modern learning approaches, and engaging activities to enhance student development.',
-    image: '/assets/team/Dhivya Darshini.jpg',
-  },
 ]
 
 const stats = [
-  { value: '15+', label: 'Years of service' },
-  { value: '5', label: 'Dedicated staff' },
+  { value: '10+', label: 'Years of service' },
+  { value: '15+', label: 'Dedicated staff' },
   { value: '100+', label: 'Children supported' },
   { value: '6', label: 'Therapy disciplines' },
 ]
