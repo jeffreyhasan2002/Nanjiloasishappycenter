@@ -202,8 +202,8 @@ export function OurJourney() {
             <span className="journey-chapter__eyebrow">Chapter 2</span>
             <h2 className="journey-chapter__title">A Dream Built Together</h2>
             <p>
-              Today, Mrs.&nbsp;Rama, her husband <strong>T.S. Rajan</strong>, and their
-              supportive friends lead a devoted team of educators and therapists who
+              Today, Mrs.&nbsp;Rama, her husband <strong>T.S. Rajan</strong>, and her
+              supportive friend A. Jesila Banu lead a devoted team of educators and therapists who
               champion each child&rsquo;s potential.
             </p>
             <p>
