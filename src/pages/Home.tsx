@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { phone, phoneDisplay, email, servicesData } from '../constants/site'
+import { PageMeta } from '../components/PageMeta'
+import { phone, phoneDisplay, email, servicesData, SITE_NAME, SITE_TAGLINE, SITE_DEFAULT_DESCRIPTION } from '../constants/site'
 import { heroImage, serviceImages, galleryImages } from '../constants/images'
 import { SHAPE_PATHS } from '../constants/shapes'
 import { youtubeVideos } from '../constants/videos'
@@ -133,6 +134,12 @@ export function Home() {
 
   return (
     <>
+      <PageMeta
+        title={`${SITE_NAME} | ${SITE_TAGLINE}`}
+        description={SITE_DEFAULT_DESCRIPTION}
+        titleOnly
+      />
+
       {/* ── Hero (unchanged) ──────────────────────────────────────────── */}
       <section className="hero hero--with-image" aria-label="Welcome">
         <div className="hero__image-wrap">
@@ -146,9 +153,9 @@ export function Home() {
       <section className="section section--about-video" style={{ paddingTop: '1.5rem' }}>
         <div className="container" style={{ textAlign: 'center', marginBottom: '2.25rem' }}>
           <p className="section__label" style={{ marginBottom: '0.75rem', color: '#000' }}>Who we are</p>
-          <h2 className="section__title section__title--large" style={{ color: 'var(--color-primary)', fontWeight: 700, marginBottom: 0 }}>
+          <h1 className="section__title section__title--large" style={{ color: 'var(--color-primary)', fontWeight: 700, marginBottom: 0 }}>
             Nanjil Oasis Happy Centre
-          </h2>
+          </h1>
         </div>
         <div className="container home-gallery-block">
           <div className="home-gallery-block__frame">

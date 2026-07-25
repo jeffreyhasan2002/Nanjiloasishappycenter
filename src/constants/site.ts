@@ -1,9 +1,19 @@
 export const SITE_NAME = 'Nanjil Oasis Happy Centre'
 export const LOGO_URL = '/assets/logo.png'
+export const SITE_URL = 'https://nanjiloasisspecialschool.in'
+export const DEFAULT_OG_IMAGE = '/assets/hero.webp'
+export const SITE_TAGLINE = 'Multicare Centre for Kids with Special Needs'
+export const SITE_DEFAULT_DESCRIPTION =
+  'Nanjil Oasis Happy Centre is a parents-led Multicare Centre in Nagercoil, Tamil Nadu supporting children with Autism, ADHD, Cerebral Palsy, Down Syndrome & Learning Difficulty through therapy, education and vocational training.'
 
 export const phone = '+919944330809'
 export const phoneDisplay = '9944330809'
 export const email = 'nanjiloasismrc2@gmail.com'
+export const addressLocality = 'Konam, Nagercoil'
+export const addressRegion = 'Tamil Nadu'
+export const addressCountry = 'IN'
+export const geoLatitude = 8.1833
+export const geoLongitude = 77.4119
 
 export const donationBank = {
   accountName: 'Nanjil Oasis Parents Welfare Trust for MRC',

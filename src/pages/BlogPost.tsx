@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { PageMeta } from '../components/PageMeta'
 import { blogPosts } from '../constants/blog'
 import { pageHeroImages } from '../constants/images'
+import { SITE_NAME, SITE_URL } from '../constants/site'
 
 function formatDate(iso: string) {
   const d = new Date(iso + 'T00:00:00')
@@ -29,7 +30,7 @@ export function BlogPost() {
   if (!post) {
     return (
       <>
-        <PageMeta title="Post not found" description="Blog post not found." />
+        <PageMeta title="Post not found" description="Blog post not found." noindex />
         <section className="section">
           <div className="container container--narrow">
             <nav className="blog-breadcrumb" aria-label="Breadcrumb">
@@ -55,9 +56,32 @@ export function BlogPost() {
     return { url: img.url, alt: img.alt || rel.title }
   }
 
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: `${SITE_URL}${featuredImage.url || fallbackImage.url}`,
+    datePublished: post.date,
+    author: {
+      '@type': 'Organization',
+      name: post.author?.name ?? SITE_NAME,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+    },
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+  }
+
   return (
     <>
-      <PageMeta title={post.title} description={post.excerpt} />
+      <PageMeta
+        title={post.title}
+        description={post.excerpt}
+        image={featuredImage.url || undefined}
+        jsonLd={articleJsonLd}
+      />
       <article className="blog-post">
 
         {/* Header */}
