@@ -4,13 +4,72 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Nanjil Oasis Happy Centre - A Unit of Multicare Centre for Kids with Special Needs. We help children with Autism, ADHD, Cerebral Palsy, Down Syndrome & Learning Difficulty." />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!--
+      Everything with data-default below is a static fallback for crawlers that
+      DON'T execute JavaScript (social link previews on WhatsApp/Facebook/
+      LinkedIn/Twitter, and any bot that only reads raw HTML) — they always
+      describe the homepage since this is a client-rendered SPA with one
+      index.html for every route. For JS-executing clients (real browsers,
+      Googlebot's render pass, Lighthouse), main.tsx removes every
+      [data-default] element on load and PageMeta (see
+      src/components/PageMeta.tsx) injects the correct per-page title,
+      description, canonical, OG/Twitter tags and structured data instead —
+      this avoids duplicate/conflicting meta tags once React mounts. See
+      project notes for upgrading to prerendering if true per-page social
+      previews become important.
+    -->
+    <meta data-default name="description" content="Nanjil Oasis Happy Centre - A Unit of Multicare Centre for Kids with Special Needs. We help children with Autism, ADHD, Cerebral Palsy, Down Syndrome & Learning Difficulty." />
+    <meta data-default property="og:type" content="website" />
+    <meta data-default property="og:site_name" content="Nanjil Oasis Happy Centre" />
+    <meta data-default property="og:title" content="Nanjil Oasis Happy Centre | Multicare Centre for Kids with Special Needs" />
+    <meta data-default property="og:description" content="Nanjil Oasis Happy Centre - A Unit of Multicare Centre for Kids with Special Needs. We help children with Autism, ADHD, Cerebral Palsy, Down Syndrome & Learning Difficulty." />
+    <meta data-default property="og:url" content="https://nanjiloasisspecialschool.in/" />
+    <meta data-default property="og:image" content="https://nanjiloasisspecialschool.in/assets/hero.webp" />
+    <meta data-default property="og:locale" content="en_IN" />
+    <meta data-default name="twitter:card" content="summary_large_image" />
+    <meta data-default name="twitter:title" content="Nanjil Oasis Happy Centre | Multicare Centre for Kids with Special Needs" />
+    <meta data-default name="twitter:description" content="Nanjil Oasis Happy Centre - A Unit of Multicare Centre for Kids with Special Needs. We help children with Autism, ADHD, Cerebral Palsy, Down Syndrome & Learning Difficulty." />
+    <meta data-default name="twitter:image" content="https://nanjiloasisspecialschool.in/assets/hero.webp" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sarala:wght@400;700&display=swap" rel="stylesheet">
     <title>Nanjil Oasis Happy Centre | Multicare Centre for Kids with Special Needs</title>
-    <script type="module" crossorigin src="/assets/index-vJ3-YJHQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CRPSVvyY.css">
+
+    <script data-default type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Nanjil Oasis Happy Centre",
+        "alternateName": "Nanjil Oasis Parent Welfare Trust",
+        "description": "Nanjil Oasis Happy Centre is a parents-led Multicare Centre in Nagercoil, Tamil Nadu supporting children with Autism, ADHD, Cerebral Palsy, Down Syndrome & Learning Difficulty through therapy, education and vocational training.",
+        "url": "https://nanjiloasisspecialschool.in",
+        "logo": "https://nanjiloasisspecialschool.in/assets/logo.png",
+        "image": "https://nanjiloasisspecialschool.in/assets/hero.webp",
+        "telephone": "+919944330809",
+        "email": "nanjiloasismrc2@gmail.com",
+        "foundingDate": "2016",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Konam, Nagercoil",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 8.1581619,
+          "longitude": 77.4088862
+        },
+        "sameAs": [
+          "https://www.instagram.com/nanjil_oasis",
+          "https://www.youtube.com/@nanjiloasishappycentrespecials"
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-D6xNCVjI.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DJDyWWOr.css">
   </head>
   <body>
     <div id="root"></div>

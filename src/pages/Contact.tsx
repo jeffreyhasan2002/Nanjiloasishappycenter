@@ -1,6 +1,6 @@
 import { PageMeta } from '../components/PageMeta'
 import { PageHero } from '../components/PageHero'
-import { phone, phoneDisplay, email, socialLinks } from '../constants/site'
+import { phone, phoneDisplay, email, socialLinks, geoLatitude, geoLongitude, mapUrl } from '../constants/site'
 import { pageHeroImages } from '../constants/images'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -19,7 +19,7 @@ L.Icon.Default.mergeOptions({
 })
 
 // Konam, Nagercoil coordinates
-const CENTER: [number, number] = [8.1833, 77.4119]
+const CENTER: [number, number] = [geoLatitude, geoLongitude]
 
 export function Contact() {
   return (
@@ -178,7 +178,7 @@ export function Contact() {
               </div>
 
               <a
-                href="https://www.openstreetmap.org/?mlat=8.1833&mlon=77.4119#map=16/8.1833/77.4119"
+                href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-map-panel__directions"

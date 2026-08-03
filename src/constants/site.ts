@@ -12,8 +12,9 @@ export const email = 'nanjiloasismrc2@gmail.com'
 export const addressLocality = 'Konam, Nagercoil'
 export const addressRegion = 'Tamil Nadu'
 export const addressCountry = 'IN'
-export const geoLatitude = 8.1833
-export const geoLongitude = 77.4119
+export const geoLatitude = 8.1581619
+export const geoLongitude = 77.4088862
+export const mapUrl = 'https://maps.app.goo.gl/tqM6GduqMrA9Zvzd9'
 
 export const donationBank = {
   accountName: 'Nanjil Oasis Parents Welfare Trust for MRC',
